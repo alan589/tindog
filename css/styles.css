@@ -1,0 +1,169 @@
+/* tag selectors */
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+p {
+  color: #8f8f8f;
+}
+
+/* headings */
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.big-heading {
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+#title .big-heading {
+  font-weight: 900;
+}
+
+/* containers */
+.container-fluid {
+  padding: 7% 15%;
+}
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+  text-align: left;
+}
+
+
+#footer .container-fluid {
+  padding: 4% 15%;
+}
+
+/* sections */
+
+.white-section {
+  background-color:#fff;
+  color: #000;
+}
+
+.colored-section {
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+
+/* navbar */
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+.nav-item {
+  padding: 0 18px;
+}
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* title */
+
+.download-btn {
+  margin: 5% 3% 5% 0;
+}
+.iphone-img {
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 30%;
+}
+
+/* features */
+
+#features {
+  position: relative;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+.feature-img {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+.feature-img:hover {
+  color: #ff4c68;
+}
+.feature-box {
+  padding: 5%;
+}
+
+
+/* testimonials */
+
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+.testimonial-img {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+
+/* press */
+#press {
+  background-color: #ef8172;
+}
+#press {
+  padding-bottom: 3%;
+}
+
+.press-img {
+  width: 13%;
+  margin: 20px 20px 50px;
+}
+
+/* pricing */
+
+.pricing-col {
+  padding: 3% 3%;
+}
+
+/* cta */
+
+
+/* footer */
+
+.footer-icon {
+  margin: 3% 1%;
+  color: black;
+  display: inline-block;
+}
+.footer-icon:hover {
+  color: #ff4c68;
+  text-decoration: none;
+}
+
+@media (max-width: 992px) {
+
+  #title .container-fluid{
+    text-align: inherit;
+  }
+
+  .iphone-img {
+    position: static;
+    margin: 3rem 0 1rem;
+  }
+}
