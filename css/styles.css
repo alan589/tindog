@@ -65,7 +65,7 @@ p {
 
 .colored-margin {
   background-color: #ff4c68;
-  height: 40px;
+  padding-top: 40px;
 }
 .navbar-brand {
   font-family: "Ubuntu";
@@ -74,12 +74,8 @@ p {
 }
 
 .navbar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
   padding: 0 15% 0 15%;
   background-color: #ff4c68;
-  z-index: 1;
 }
 .nav-item {
   padding: 0 18px;
@@ -178,7 +174,7 @@ p {
   text-decoration: none;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
   #title .container-fluid {
     text-align: inherit;
   }
@@ -187,19 +183,30 @@ p {
     position: static;
     margin: 3rem 0 1rem;
   }
+
+  .nav-link {
+    font-size: 4rem;
+  }
+  
 }
 
-#backToTop {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1rem;
-  color: white;
-  background-color: black;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+@media (min-width: 992px) {
+
+  #backToTop {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1rem;
+    color: white;
+    background-color: black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+  
 }
+
+
