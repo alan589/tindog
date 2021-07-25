@@ -1,13 +1,18 @@
 /* tag selectors */
 html {
-    scroll-behavior: smooth; 
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
@@ -36,10 +41,9 @@ p {
 }
 
 #title .container-fluid {
-  padding: 3% 15% 7%;
+  padding: 5% 15% 7%;
   text-align: left;
 }
-
 
 #footer .container-fluid {
   padding: 4% 15%;
@@ -48,7 +52,7 @@ p {
 /* sections */
 
 .white-section {
-  background-color:#fff;
+  background-color: #fff;
   color: #000;
 }
 
@@ -57,8 +61,12 @@ p {
   color: #fff;
 }
 
-
 /* navbar */
+
+.colored-margin {
+  background-color: #ff4c68;
+  height: 40px;
+}
 .navbar-brand {
   font-family: "Ubuntu";
   font-size: 2.5rem;
@@ -66,7 +74,12 @@ p {
 }
 
 .navbar {
-  padding: 0 0 4.5rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding: 0 15% 0 15%;
+  background-color: #ff4c68;
+  z-index: 1;
 }
 .nav-item {
   padding: 0 18px;
@@ -108,7 +121,6 @@ p {
   padding: 5%;
 }
 
-
 /* testimonials */
 
 #testimonials {
@@ -125,6 +137,9 @@ p {
   margin: 20px;
 }
 
+.carousel-fade .carousel-item {
+  transition-duration: 2s;
+}
 
 /* press */
 #press {
@@ -143,10 +158,13 @@ p {
 
 .pricing-col {
   padding: 3% 3%;
+  transition: transform 300ms ease-in-out;
 }
 
+.pricing-col:hover {
+  transform: scale(1.05);
+}
 /* cta */
-
 
 /* footer */
 
@@ -161,8 +179,7 @@ p {
 }
 
 @media (max-width: 992px) {
-
-  #title .container-fluid{
+  #title .container-fluid {
     text-align: inherit;
   }
 
@@ -170,4 +187,19 @@ p {
     position: static;
     margin: 3rem 0 1rem;
   }
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1rem;
+  color: white;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
