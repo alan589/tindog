@@ -14,7 +14,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="css/styles.css" />
-    
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -30,38 +30,40 @@
   </head>
 
   <body>
+    <!-- Nav Bar -->
+    <div class="colored-margin" id="home"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="">Tindog</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#footer">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cta">Download</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <section class="colored-section" id="title">
-      <!-- Nav Bar -->
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-          <a class="navbar-brand" href="">Tindog</a>
-
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#footer">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#pricing">Pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#cta">Download</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
         <!-- Title -->
         <div class="row">
           <div class="col-lg-6">
@@ -115,7 +117,7 @@
     <section class="colored-section" id="testimonials">
       <div
         id="carouselExampleFade"
-        class="carousel slide"
+        class="carousel slide carousel-fade"
         data-ride="carousel"
         data-interval="6000"
         data-pause="false"
@@ -291,6 +293,11 @@
       </div>
     </footer>
 
+    <!-- BACK TO TOP -->
+    <a id="backToTop" href="#home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -308,5 +315,48 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+
+    <!-- BACK TO TOP -->
+    <script>
+      window.onscroll = function () {
+        if (pageYOffset >= 400) {
+          document.getElementById("backToTop").style.visibility = "visible";
+        } else {
+          document.getElementById("backToTop").style.visibility = "hidden";
+        }
+      };
+
+      document.getElementById("backToTop").onclick = function () {
+        scrollTo(document.body, 0, 0);
+      };
+
+      function scrollTo(element, to, duration) {
+        var start = element.scrollTop,
+          change = to - start,
+          currentTime = 0,
+          increment = 20;
+
+        var animateScroll = function () {
+          currentTime += increment;
+          var val = Math.easeInOutQuad(currentTime, start, change, duration);
+          element.scrollTop = val;
+          if (currentTime < duration) {
+            setTimeout(animateScroll, increment);
+          }
+        };
+        animateScroll();
+      }
+
+      //t = current time
+      //b = start value
+      //c = change in value
+      //d = duration
+      Math.easeInOutQuad = function (t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return (c / 2) * t * t + b;
+        t--;
+        return (-c / 2) * (t * (t - 2) - 1) + b;
+      };
+    </script>
   </body>
 </html>
