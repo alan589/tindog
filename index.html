@@ -318,8 +318,11 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- BACK TO TOP -->
     <script>
+      $(".navbar-nav>li>a").click(function () {
+        $(".navbar-collapse").collapse("hide");
+      });
+
       window.onscroll = function () {
         if (pageYOffset >= 400) {
           document.getElementById("backToTop").style.visibility = "visible";
@@ -327,11 +330,6 @@
           document.getElementById("backToTop").style.visibility = "hidden";
         }
       };
-
-
-      $('.navbar-nav>li>a').on('click', function(){
-    $('.navbar-collapse').collapse('hide');
-});
     </script>
   </body>
 </html>
