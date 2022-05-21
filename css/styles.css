@@ -189,26 +189,7 @@ p {
   }
 }
 
-@media (min-width: 500px) {
-  #backToTop {
-    position: fixed;
-    bottom: 1.5rem;
-    right: 1rem;
-    color: white;
-    background-color: black;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-  }
-}
 @media (max-width: 499px) {
-  #backToTop {
-    display: none;
-  }
   .testimonial-text {
     font-size: 1.5rem;
   }
