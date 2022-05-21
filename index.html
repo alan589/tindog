@@ -294,11 +294,6 @@
           <p>© Copyright 2021 TinDog</p>
         </div>
       </footer>
-
-      <!-- BACK TO TOP -->
-      <a id="backToTop" href="#home">
-        <i class="fas fa-arrow-up"></i>
-      </a>
     </div>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -318,18 +313,5 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      $(".navbar-nav>li>a").click(function () {
-        $(".navbar-collapse").collapse("hide");
-      });
-
-      window.onscroll = function () {
-        if (pageYOffset >= 400) {
-          document.getElementById("backToTop").style.visibility = "visible";
-        } else {
-          document.getElementById("backToTop").style.visibility = "hidden";
-        }
-      };
-    </script>
   </body>
 </html>
